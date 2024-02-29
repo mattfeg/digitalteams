@@ -102,6 +102,9 @@ header .busca box-icon:hover{
     padding: 16px;
     border-radius: 10px;
 }
+#teams ul li.none{
+    display: none;
+}
 #teams ul li.noTeams{
     width: 100%;
 }
