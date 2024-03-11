@@ -102,6 +102,9 @@ function mostrarFormParticipante(indice){
 }
 
 function mostrarParticipantes(indice){
+    if(teams[indice].members.length == 0){
+        return alert("Team vazio!")
+    }
     alert(teams[indice].members)
 }
 
