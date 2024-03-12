@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - PYTHONDONTWRITEBYTECODE=1
+      - PYTHONUNBUFFERED=1
+    working_dir: /code
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/code
+    command: python manage.py runserver 0.0.0.0:8000
+    restart: unless-stopped
+    tty: true
